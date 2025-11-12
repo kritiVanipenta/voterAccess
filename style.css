@@ -24,4 +24,35 @@ body {
     padding: 10px 20px;
     cursor: pointer;
   }
+
+  .start-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers text inside */
+  gap: 8px;
+  padding: 20px 32px;
+  background: #4A306D;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect for interactivity */
+.start-btn:hover {
+  background: #5C3C86;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: pressed (active) state */
+.start-btn:active {
+  background: #3C2656;
+  transform: translateY(0);
+}
+
   
