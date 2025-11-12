@@ -6,17 +6,10 @@ body {
     padding: 0; /* removes default white space browsers add */
   }
   
-  /* Header styling */
-  header {
-    width: 100%; /* don’t hardcode 1440px — this makes it responsive */
-    height: 380px;
-    background-color: #F8F4F9;
-    padding: 60px 80px 0 20px; /* top | right | bottom | left */
-    box-sizing: border-box;
-  }
+
   
-/* --- HERO SECTION --- */
-.hero {
+/* --- HEADER SECTION --- */
+.header {
     background-color: #F8F4F9; /* soft lavender/purple tone */
     display: flex;
     flex-direction: column;
@@ -27,14 +20,14 @@ body {
     gap: 16px;
   }
   
-  .powered-by {
+  .header h2{
     font-size: 14px;
     color: #3E3E3E;
     margin: 0;
     font-weight: 500;
   }
   
-  .hero-title {
+  .header h1 {
     font-size: 48px;
     font-weight: 800;
     color: #000;
@@ -42,7 +35,7 @@ body {
     font-family: 'Inter', sans-serif;
   }
   
-  .hero-subtitle {
+  .header h3 {
     font-size: 18px;
     color: #4B3B63;
     max-width: 500px;
