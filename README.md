@@ -36,6 +36,8 @@ you should then see your branch update on to the github website and stuff, if an
 
 IN SUMMARY
 
+git branch → check which branch 
+
 git checkout main → switch to main branch
 
 git pull origin main --rebase → sync with GitHub
@@ -55,6 +57,7 @@ after you push you should discard the branch or just keep track of what you are 
 git checkout main
 git pull origin main
 git merge --no-ff branch-to-close
+
 
 
 
