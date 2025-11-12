@@ -11,6 +11,8 @@ git branch      # See which branch you’re on
 
 then to create a new branch
 
+(when creating a branch in general make sure to get the updated version of the main that you want to make a copy of) git pull origin main
+
 git checkout -b my-feature   # Creates and switches to a new branch (change the my-feature part to your branch name)
 
 but what if you want to switch between branches because you have a ton of them, have no fear use this
