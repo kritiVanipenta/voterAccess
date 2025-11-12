@@ -6,11 +6,10 @@ body {
   }
   
   header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #ffffff;
+    width: 1440px;
+    height: 420px;
+    flex-shrink: 0;
+    background-color: #F8F4F9;
   }
   
   .hero {
