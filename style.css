@@ -4,6 +4,8 @@ body {
     background-color: #fff;
     margin: 0;
     padding: 0; /* removes default white space browsers add */
+    width: 100%;
+    height: 100%;
   }
   
 
@@ -114,30 +116,84 @@ body {
     color: #4A306D;
     font-weight: 600;
   }
-  
 
-.home-btn {
+.navigation {
+  position: relative;
+  width: 100%;
+  height: 164px;
+  background-color: #f8f4f9;
+  overflow: hidden;
+}
+
+.navigation .ellipse {
+  position: absolute;
+  top: -60px;
+  left: 1171px;
+  width: 370px;
+  height: 286px;
+  background-color: #bea7e5;
+  border-radius: 185px/143px;
+  filter: blur(40px);
+  opacity: 0.55;
+}
+
+.navigation .home-btn {
+  all: unset;
+  box-sizing: border-box;
   display: flex;
   width: 128px;
   height: 64px;
-  padding: 14px 24px;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  flex-shrink: 0;
+  padding: 14px 24px;
+  position: absolute;
+  top: 51px;
+  left: 1265px;
+  background-color: #4a306d;
   border-radius: 8px;
-  background: #4A306D;
-
-  color: #FFF;
-
-  /* Small text */
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 150%; /* 24px */
+  box-shadow: var(--button-shadow);
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
+.navigation .text-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  font-family: var(--small-text-font-family);
+  font-weight: var(--small-text-font-weight);
+  color: #ffffff;
+  font-size: var(--small-text-font-size);
+  letter-spacing: var(--small-text-letter-spacing);
+  line-height: var(--small-text-line-height);
+  white-space: nowrap;
+  font-style: var(--small-text-font-style);
+}
+
+.navigation .div {
+  position: absolute;
+  top: 43px;
+  left: 60px;
+  width: 844px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 64px;
+  letter-spacing: -1.28px;
+  line-height: normal;
+}
+
+.navigation .line {
+  position: absolute;
+  top: 131px;
+  left: 67px;
+  width: 723px;
+  height: 2px;
+  object-fit: cover;
+}
 
 /* Hover effect for interactivity */
 .home-btn:hover{
@@ -152,67 +208,80 @@ body {
   transform: translateY(0);
 }
 
-.objblur {
-  width: 370px;
-  height: 286px;
-  flex-shrink: 0;
-
-  border-radius: 370px;
-  opacity: 0.55;
-  background: #BEA7E5;
-  filter: blur(40px);
-}
-
-.heading h1 {
-  width: 844px;
-  color: #000;
-  font-family: Inter;
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -1.28px;
-}
-
 .line1 {
-  width: 1440px;
+  position: relative;
+  top: 161px;
+  object-fit: cover;
+  width: 100%;
   height: 3px;
   background: #4A306D;
 }
 
-.bot {
+.content {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;       /* center horizontally */
+  padding-top: 0;       /* keep flush with the divider */
+  /* remove any margin-top you may have added earlier */
+}
+
+.content .group {
+  position: relative;
+  top: 0;     /* remove the artificial gap */
+  left: 0;    /* stop hard-coding horizontal offset */
+  margin: 0 auto;
+  width: 860px;
+  height: 1169px; /* you can keep or switch to min-height */
+}
+
+.content .bot {
+  position: absolute;
+  top: 0;
+  left: 1px;
   width: 859px;
-  height: 1166.823px;
-  flex-shrink: 0;
-  background: #F8F4F9;
+  min-height: 1166px;
+  background-color: #f8f4f9;
+  margin: 0;
+  padding: 0;
 }
 
 .line3 {
+  left: 0;
+  position: absolute;
   width: 3px;
-  height: 1165.596px;
+  min-height: 1166px;
   background: #4A306D;
 }
 
 .line2 {
+  left: 856px;
+  position: absolute;
   width: 3px;
-  height: 1165.596px;
+  min-height: 1166px;
   background: #4A306D;
 }
 
-.line4 {
-  width: 294.002px;
-  height: 3px;
-  background: #4A306D;
+.map {
+  position: absolute;
+  left: 0;          /* sit right inside the 3px border */
+  bottom: 24px;
+  width: 305px;
+  top: 600px;
 }
 
-.line5 {
-  width: 294.002px;
-  height: 3px;
-  background: #4A306D;
+.maptitle {
+  background: #f8f4f9;
+  /* remove left inset so lines start flush with the border */
+  padding: 10px 12px 8px 0 !important;
+  height: 35px;
+  border-top: 3px solid #4A306D;
+  border-bottom: 3px solid #4A306D;
 }
 
 .maptitle p{
-  width: 844px;
+  margin: 0;
+  top: 648px;
+  width: auto;
   height: 24px;
   flex-shrink: 0;
 
@@ -224,10 +293,3 @@ body {
   line-height: normal;
   letter-spacing: -0.46px;
 }
-
-/* .navi {
-  width: 1440px;
-  height: 164px;
-  flex-shrink: 0;
-  background: #F8F4F9;
-} */
