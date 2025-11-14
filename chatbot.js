@@ -28,48 +28,19 @@ async function getAuthToken() {
 }
 
 
-// Function to send message to chatbot
 async function sendMessageToChatbot(userMessage) {
-    try {
-        // Get token if we don't have one
-        if (!authToken) {
-            await getAuthToken();
-        }
-        
-        if (!authToken) {
-            throw new Error("Failed to authenticate with IBM Watson");
-        }
-        
-        const payload = {
-            messages: [
-                {
-                    role: "user",
-                    content: userMessage
-                }
-            ]
-        };
-        
-        const response = await fetch(SCORING_URL, {
-            method: "POST",
-            headers: {
-                "Accept": "application/json",
-                "Authorization": `Bearer ${authToken}`,
-                "Content-Type": "application/json;charset=UTF-8"
-            },
-            body: JSON.stringify(payload)
-        });
-        
-        if (!response.ok) {
-            throw new Error(`Chatbot request failed with status ${response.status}`);
-        }
-        
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error("Error sending message to chatbot:", error);
-        return { error: error.message };
-    }
+  const res = await fetch("/api/chat", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      messages: [{ role: "user", content: userMessage }]
+    })
+  });
+
+  return await res.json();
 }
+
+
 
 // Initialize chatbot widget
 function initializeChatbot() {
