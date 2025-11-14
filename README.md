@@ -52,7 +52,7 @@ git commit -m "message" → commit changes
 
 git push -u origin new-feature → upload to GitHub
 
-after you push you should discard the branch or just keep track of what you are pushing to main or else you might come across problem but nothing chat cant solve with stashing
+after you push you should discard the branch or just keep track of what you are pushing to main or else you might come across problem but nothing chat cant solve with stashing...
 
 git checkout main
 git pull origin main
