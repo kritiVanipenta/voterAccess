@@ -1,4 +1,7 @@
 # voterAccess
+
+figma prototype: https://www.figma.com/design/d0GKpjXfrtY1Hyettv2bSv/IBM-Chatbot-website?node-id=1-5727&t=CDAAHMjAgYyWGwl4-1 
+
 OK guys, here is the breakdown on how to push create branches and use github overall.
 
 Ok so basically whenever you want to make changes on github you want to first make a branch before you make any changes
